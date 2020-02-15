@@ -5,6 +5,7 @@ Execute this script with no arguments taken from project root with:
 `chmod +x CS1XA3/Project01/project_analyze.sh`
 `cd CS1XA3/Project01`
 `./project_analyze.sh`
+Note: This script takes no arguments
 
 On execution:
 1. Using the read command, the script prompts the user for their name, and greets them.
@@ -19,17 +20,17 @@ On execution:
   and the script ends
 - For example, the following inputs will execute Feature 6.6 Find Tag:
   - Welcome to my first Bash Script, provide a name:
-   John
+    John
   - Hello John, pick a number between 1 and 3:
-   2
+    2
 
 ## Feature 1: File Type Count
-- **Description**: this feature prompts the user for a file extension and then returns the number of files in the CS1XA3 repo that contain that extension. 
+- **Description**: this feature prompts the user for a file extension and then returns the number of files in the CS1XA3 repo that contain that extension. Script recursively searches the repo for files with the extension.
 - **Pitfalls**: if the user inputs a file extension containing '/', a warning message is thrown because a file can never have that character as an extension but the code still executes without 'errors'.
 - **Execution**: execute this feature by providing the number 1 when prompted to pick a number between 1 and 3. (after providing name at the beginning)
 
 ## Feature 2: Find Tag
-- **Description**: this feature prompts the user for a tag and searches the CS1XA3 repo for any files ending in '.py'. It then analyzes the text inside each .py file and finds all comments (i.e #) with the tag mentioned in them. These comments are then placed in a file called Tag.log (where Tag is the tag inputted by the user) in the Project01 directory.
+- **Description**: this feature prompts the user for a tag using 'read' and searches the CS1XA3 repo for any files ending in '.py' with the find function. Using piping, each file is passed to two grep functions which check each file for lines starting with '#' and containing the tag. These lines are echoed into the file Tag.log where Tag is the tag provided by the user 
 - **Pitfalls**: none
 - **Execution**: execute this feature by providing the number 2 when prompted to pick a number between 1 and 3. (after providing name at the beginning)
 - **References**: 
@@ -37,7 +38,7 @@ On execution:
     - https://ss64.com/bash/grep.html 
 
 ## Feature 3: FIXME Log
-- **Description**: this feature searches the repo CS1XA3 for any files where the last line contains the string ***#FIXME*** and prints the file names in a file called fixme.log in the Project01 directory.
+- **Description**: this feature searches the repo CS1XA3 for any files where the last line contains the string ***#FIXME*** using recursive grep. Then, script checks if the last line contains *#FIXME* and if it does, then script prints the file names in a file called fixme.log in the Project01 directory.
 - **Pitfalls**: None
 - **Execution**: execute this feature by providing the number 3 when prompted to pick a number between 1 and 3 (after providing name at the beginning).
 - **Reference**: https://linuxize.com/post/how-to-check-if-string-contains-substring-in-bash/
@@ -52,3 +53,18 @@ On execution:
         - prompt the user for a directory name and a file extension but place restriction so .sh and .md extensions can not be inputted 
         - the directory, if it doesn't exist (overwrite it if it does) is created
         - files in the repo that do not yet have an extension (i.e do not contain '.' character) are given the extension inputted by the user and moved into the directory that was just created
+
+## Custom Feature 2: To do list Manager
+- **Description**:
+    - Find all files that have '#TODO' inside them and display them to the user. Note: the line must start with a comment. The file path should be first, and then the line containing #TODO should be beside it (if a file has multiple occurences of #TODO, print the first one)
+        - Sample display: 
+            - Project01/file.py: #TODO add if statement 
+            - Sample/test.py: #TODO ask for user input 
+    - Prompt the user to either `Add`, `Delete`, or `Replace`
+    - If user chooses `Add`:
+        - Using the read command, prompt them for the file path that they want to modify as well as the new #TODO comment itself. Add the comment in the last line of that file
+    - If user chooses `Delete`:
+        - Using the read command, prompt them for the file path that they want to modify. Delete the first #TODO comment from the file
+    - If user chooses `Replace`:
+        - Prompt them for the file path of file that they want to modify and new #TODO comment. Replace the old #TODO comment with the new one
+
