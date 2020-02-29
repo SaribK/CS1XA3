@@ -43,16 +43,35 @@ On execution:
 - **Execution**: execute this feature by providing the number 3 when prompted to pick a number between 1 and 3 (after providing name at the beginning).
 - **Reference**: https://linuxize.com/post/how-to-check-if-string-contains-substring-in-bash/
 
+## Feature 4: Backup and Delete/Restore
+- **Description**: prompts the user to `Backup` or `Restore`. If `Backup` is selected, using the find and cp command, script moves all files ending in .tmp into a backup directory with a file restore.log that has the file paths of the files. If `Restore` is selected, script moves files back to their original location
+- **Pitfalls**: If there are two files in different directories with the same name, the script only takes the first file because it can not put two files with the same name in the directory
+- **Execution**: execute this feature by inputting 4 when prompted to select a feature
+ 
+## Feature 5: Switch to Executable
+- **Description**: prompts the user to `Change` or `Restore`. For `Change`, script changes permissions so that only people with write permissions have executable. Also, it keeps a log of the original permissions. For `Restore`, script puts back the original permissions on each file it changed.
+- **Pitfalls**: 
+- **Execution**: execute this feature by inputting 5 when prompted to select a feature
+- **References**: 
+    - https://superuser.com/questions/359989/what-is-a-simple-standard-command-line-way-of-getting-ls-to-produce-file-permi
+    - https://stackoverflow.com/questions/10218474/how-to-obtain-the-first-letter-in-a-bash-variable
+    - https://stackabuse.com/substrings-in-bash/
+
 ## Custom Feature 1: Remove/Add File Extension
 - **Description**:
-    - using the read command, user is prompted to `Remove` or `Add`
+    - using the read command, user is prompted to `Remove` or `Add` file extensions
     - if the user chooses `Remove`:
         - prompt the user for a file extension but place restriction so .sh and .md extensions can not be inputted
         - find all files that contain that extension and remove it (i.e file1.txt turns into file1 if .txt is extension)
     - if the user chooses `Add`:
-        - prompt the user for a directory name and a file extension but place restriction so .sh and .md extensions can not be inputted 
+        - prompt the user for a directory name and a file extension but place restriction so .sh and .md extensions can not be inputted
         - the directory, if it doesn't exist (overwrite it if it does) is created
         - files in the repo that do not yet have an extension (i.e do not contain '.' character) are given the extension inputted by the user and moved into the directory that was just created
+- **Pitfalls**: Although it is fixed now, when user chose to add a file extension, the script would also go into the ".git" directory and take files from there, but then I modified the script so that it ignores any files inside the .git repository
+- **Execution**: execute this feature by inputting 6 when prompted to select a feature
+- **References**: 
+    - https://stackoverflow.com/questions/4509485/linux-remove-file-extensions-for-multiple-files
+    - https://unix.stackexchange.com/questions/144208/find-files-without-extension
 
 ## Custom Feature 2: To do list Manager
 - **Description**:
@@ -64,7 +83,10 @@ On execution:
     - If user chooses `Add`:
         - Using the read command, prompt them for the file path that they want to modify as well as the new #TODO comment itself. Add the comment in the last line of that file
     - If user chooses `Delete`:
-        - Using the read command, prompt them for the file path that they want to modify. Delete the first #TODO comment from the file
+        - Using the read command, prompt them for the file path that they want to modify. Delete the #TODO comment from the file. 
     - If user chooses `Replace`:
         - Prompt them for the file path of file that they want to modify and new #TODO comment. Replace the old #TODO comment with the new one
-
+- **Execution**: execute this feature by inputting 7 when prompted to select a feature
+- **References**: 
+    - https://unix.stackexchange.com/questions/57876/how-to-print-only-the-first-match-with-grep
+    - https://linuxize.com/post/how-to-use-grep-command-to-search-files-in-linux/
