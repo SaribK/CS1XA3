@@ -105,10 +105,6 @@ else
 		fi
 	elif [ "$varnum" -eq 5 ] ; then
 		#6.7 Switch to Executable
-		if [[ -e permissions.log ]]; then
-		        rm permissions.log
-		fi
-		touch permissions.log
 		cd ..
 		echo -e '\nSelect one of the following options: \n      1 - Change \n      2 - Restore'
 		read choice
@@ -117,6 +113,10 @@ else
 		else
 		        #if they choose Change
 		        if [[ "$choice" -eq 1 ]]; then
+				if [ -e Project01/permissions.log ] ; then
+					rm Project01/permissions.log
+				fi
+				touch Project01/permissions.log
 				#find all .sh files and loop through each one
 		                for file in `find . -type f -name "*.sh"`; do
 					#extract the numerical form of the permissions -> Code sourced in README
@@ -149,16 +149,20 @@ else
 		                        echo "$permission:$file" >> Project01/permissions.log
 		                done
 		        elif [[ "$choice" -eq 2 ]]; then
-				#for loop through each file and its permissions
-		                for string in `cat Project01/permissions.log`; do
-					#extract substrings of permission and the filepath
-		                        original=`echo "$string" | cut -d ":" -f1`
-		                        file=`echo "$string" | cut -d ":" -f2`
-					if [ -e "$file" ] ; then
-						#change permission of filepath
-		                        	chmod "$original" "$file"
-					fi
-		                done
+				if [ -e Project01/permissions.log ] ; then
+					#for loop through each file and its permissions
+			                for string in `cat Project01/permissions.log`; do
+						#extract substrings of permission and the filepath
+			                        original=`echo "$string" | cut -d ":" -f1`
+			                        file=`echo "$string" | cut -d ":" -f2`
+						if [ -e "$file" ] ; then
+							#change permission of filepath
+			                        	chmod "$original" "$file"
+						fi
+			                done
+				else
+					echo There is nothing to restore
+				fi
 		        else
 		                echo Incorrect Input
 		        fi
