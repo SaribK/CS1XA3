@@ -81,6 +81,7 @@ else
 				#put the files in backup and delete original files
 				find . -name "*.tmp" | xargs -i cp '{}' Project01/backup
 				cat Project01/backup/restore.log | xargs -i rm '{}'
+				echo Files backed up
 			elif [ "$choice" -eq 2 ] ; then
 				cd ..
 				#check if restore.log even exists
