@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Sarib's Resume Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <!---------- Header Section ---------->
+  <section id="header">
+    <div class="container text-center">
+      <div class="user-box">
+        <img src="img/profile.jpg">
+        <h1>Sarib Kashif</h1>
+        <p>Computer Science Student at McMaster University</p>
+      </div>
+    </div>
+    <div class="scroll-btn">
+      <div class="scroll-bar"><a href=""><span></span></a></div>
+    </div>
+  </section>
+
+  <!----------User-Info Section----------->
+  <section id="user-info">
+    <div class="nav-bar" id="nav-bar">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#top">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT ME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resume">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">SKILLS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+            <button class="btn btn-primary dark-button" onclick="toggleDarkMode()">Dark Mode</button>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-------About Me-------->
+    <div class="about container" id="about">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <img src="img/profile.jpg" class="profile-img">
+        </div>
+        <div class="col-md-6">
+          <h3>ABOUT ME</h3>
+          <p>
+            Skilled computer programmer capable of producing code quickly and accurately. Considerably well-versed in
+            Agile methodologies and capable of working in both independent and team-based capacities. Created numerous
+            projects in Object-Oriented and Functional Programming languages by satisfying a set of listed requirements.
+          </p>
+          <div class="skills-bar">
+            <p class="textColor">C#</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%;">90%</div>
+            </div>
+
+            <p class="textColor">Haskell</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%;">80%</div>
+            </div>
+
+            <p class="textColor">Java</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%;">90%</div>
+            </div>
+
+            <p class="textColor">Python</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%;">80%</div>
+            </div>
+
+            <p class="textColor">Bash</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 70%;">70%</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------Social Media Icons----------------->
+    <div class="social-icons" id="social-icons">
+      <ul>
+        <a href="https://www.linkedin.com/in/sarib-kashif-6047b9192/" target="_blank">
+          <li class="icons"><i class="fa fa-linkedin"></i></li>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100007695198077" target="_blank">
+          <li class="icons"><i class="fa fa-facebook"></i></li>
+        </a>
+        <a href="http://www.github.com/SaribK" target="_blank">
+          <li class="icons"><i class="fa fa-github"></i></li>
+        </a>
+        <a href="mailto:kashifsar01@gmail.com">
+          <li class="icons"><i class="fa fa-envelope"></i></li>
+        </a>
+        <a href="tel:647-242-5928">
+          <li class="icons"><i class="fa fa-phone"></i></li>
+        </a>
+      </ul>
+    </div>
+
+
+    <!--------Resume----------->
+    <div class="resume dark" id="resume">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 education">
+            <h3 class="text-center">Education</h3>
+            <ul class="timeline">
+              <li>
+                <h4><span>2019 : </span> Bachelor of Applied Science - Computer Science</h4>
+                <b>Institute</b> : McMaster University <br>
+                <b>Session</b> : Sept 2019 - April 2024 <br>
+                </p>
+              </li>
+
+              <li>
+                <h4><span>2014 : </span> Ontario Secondary School Diploma</h4>
+                <b>Institute</b> : Craig Kielburger Secondary School <br>
+                <b>Session</b> : Sept 2014 - June 2019 <br>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 work">
+            <h3 class="text-center">Work Experience</h3>
+            <ul class="timeline">
+
+              <li>
+                <h4><span>06/2018 - 08/2018 : </span> Cashier</h4>
+                <p>
+                  Maintained high productivity by efficiently processing transactions for customers.<br>
+                  <b>Company Name</b> - Pizza Pizza <br>
+                  <b>Duration</b> : 3 months <br>
+                  <b>Location</b> : Mississauga, ON, Canada <br>
+                </p>
+              </li>
+
+              <li>
+                <h4><span>10/2018 - 04/2019 : </span> Replenishment Clerk</h4>
+                <p>
+                  Pleasantly helped customers by finding requested items, boosting store revenues and improving retention rates in a timely manner while also restocking products where necessary.<br>
+                  <b>Company Name</b> - Loblaws <br>
+                  <b>Duration</b> : 7 months <br>
+                  <b>Location</b> : Milton, ON, Canada <br>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 certifications hide">
+            <h3 class="text-center">Certifications</h3>
+            <ul class="timeline">
+              <li>
+                <h4><span>2018 : </span> Cisco IT Essentials Certificate</h4>
+                <b>Institute</b> : Craig Kielburger Secondary School <br>
+                </p>
+              </li>
+
+              <li>
+                <h4><span>2019 : </span> Cisco Cybersecurity Essentials Certificate</h4>
+                <b>Institute</b> : Craig Kielburger Secondary School <br>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 volunteer hide">
+            <h3 class="text-center">Volunteer Experience</h3>
+            <ul class="timeline">
+
+              <li>
+                <h4><span>2017 - </span> Country Heritage Park</h4>
+                <p>
+                  Provided tours of the blacksmiths shop. Answered questions regarding the history of blacksmiths and provided an excellent service, leaving the visitors satisfied<br>
+                  <b>Duration</b> : 4 Days <br>
+                  <b>Location</b> : Milton, ON, Canada <br>
+                </p>
+              </li>
+
+              <li>
+                <h4><span>2018 - </span> Canadian Open Bike Corral</h4>
+                <p>
+                  Provided assistance with set up, ticketing system and the secure parking of bikes. <br>
+                  <b>Duration</b> : 5 Days <br>
+                  <b>Location</b> : Oakvill, ON, Canada <br>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <button type="button" class="btn btn-primary fixed-button fixedbutton">Next</button>
+      </div>
+    </div>
+
+    <!-------Skills------>
+    <div class="skills" id="skills">
+      <div class="container">
+        <h3>SKILLS</h3>
+        <h5>Select skill for description</h5>
+        <div>
+          <div class="skills-container">
+            <ul>
+              <li id="visible" class="skill-list">Problem Solving</li>
+              <p id="invisible" class="hide">Completed numerous HackerRanks problems and practiced with pair programming</p>
+              <li id="visible2" class="skill-list">Web Development</li>
+              <p id="invisible2" class="hide">Created a math website for Grade 1 - 8 for practice in math problems. Also created CV website</p>
+              <li id="visible3" class="skill-list">Functional Programming</li>
+              <p id="invisible3" class="hide">Completed a university course in Haskell</p>
+              <li id="visible4" class="skill-list">Object-Oriented Programming</li>
+              <p id="invisible4" class="hide">Created an Ant vs Spider simulation, as well as other projects, that use the 4 Principles of OOP</p>
+            </ul>
+
+            <ul>
+              <li id="visible5" class="skill-list">Team Leadership</li>
+              <p id="invisible5" class="hide">Participated in group hackathons and created a battle bot in a group where leadership skills were developed</p>
+              <li id="visible6" class="skill-list">Software Troubleshooting</li>
+              <p id="invisible6" class="hide">Improved troubleshooting skills by creating numerous projects and debugging it for errors</p>
+              <li id="visible7" class="skill-list">Cybersecurity</li>
+              <p id="invisible7" class="hide">Completed cisco course on cybersecurity</p>
+              <li id="visible8" class="skill-list">Oral Communication</li>
+              <p id="invisible8" class="hide">Worked at Loblaws and Pizza Pizza to improve oral communication</p>
+            </ul>
+
+            <ul>
+              <li id="visible9" class="skill-list">Github</li>
+              <p id="invisible9" class="hide">Created project fully in linux command prompt and used Git to commit, pull, push and clone project</p>
+              <li id="visible10" class="skill-list">Linux</li>
+              <p id="invisible10" class="hide">Experience using linux commands. Created a project that has features like searching for specific files, etc</p>
+              <li id="visible11" class="skill-list">Unity</li>
+              <p id="invisible11" class="hide">Created 3D ball rolling game and Tower Defense Game</p>
+              <li id="visible12" class="skill-list">Agile Development Frameworks</li>
+              <p id="invisible12" class="hide">Practiced using Scrum while working on group projects, using pair programming to improve software skills, etc</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------Projects--------->
+    <div class="projects dark" id="projects">
+      <h1 class="text-center">Projects</h1>
+      <div class="boxes">
+        <div class="box">
+          <h3 id="nav1" onclick="openFirstNav()">3D Ball Rolling Game</h3>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeFirstNav()">&times;</a>
+            <a id="navHide">3D Ball Rolling Game <br> <br> <br> - Created using Unity and Visual Studio. Programming Language is C# 
+            <br><br>- Game consists of multiple levels which get progressively harder. <br><br>- Money is earned in response to how fast the levels
+            are completed and with how many deaths. <br><br> - Users can buy different skins for their character using the money they earn.
+            <br><br> - Game progress is saved even when the user exits </a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 id="nav2" onclick="openSecondNav()">Battle Bots</h3>
+          <div id="mySidenav2" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn navbtn2" onclick="closeSecondNav()">&times;</a>
+            <a id="navHide2">Battle Bots <br><br><br> - Built in a team. Used Scrum to keep track of everyone's position <br> and ensure that everyone understands their tasks. 
+            <br> <br> - Created AI Bot that can dodge and shoot bullets from and at other bots in the arena. OOP was used to make <br> a bullet object
+            and program could access the bullet velocity to move accordingly. Bots were also <br> objects so other bot positions and velocities were used to decide when and where to shoot. 
+            <br><br>- Bot competed in tournament against other bots and came second.</a>
+          </div>
+        </div>
+        <div class="box">
+          <h3 id="nav3" onclick="openThirdNav()">Bash Multifeatured Project</h3>
+          <div id="mySidenav3" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn navbtn3" onclick="closeThirdNav()">&times;</a>
+            <a id="navHide3">Bash Multifeatured Project <br><br>- Created in Linux command terminal. <br><br>- Some of the features in the script: <br><br>
+            - File Type Count: prompts user for a file extension and finds all files in the repository that contain the extension. <br><br>
+            - Backup and Delete/Restore: Backs up or restores files depending on user input <br><br>
+            - Switch to Executable: Change file permissions so that people who have write, also have <br> 
+              executable permissions. Original permissions are saved and can be restored if depending on user input</a>
+          </div>
+        </div>
+        <div class="box">
+          <h3 id="nav4" onclick="openFourthNav()">Ants vs Spiders Simulation</h3>
+          <div id="mySidenav4" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn navbtn4" onclick="closeFourthNav()">&times;</a>
+            <a id="navHide4">Ants vs Spiders Simulation (not realistic)<br><br>- Simulation designed to show how spiders and ants act
+            when they are close to each other. <br><br>- Uses Object Oriented Programming in Java <br><br>
+            - Different types of ants (killer, farmer, etc) are abstracted from the parent Ant branch <br><br>
+            - Same concept with spider. Spiders spawn at the Queen Spider's location <br><br>
+            - Ants spawn at ant hill location.<br><br>
+            - Ants and Spiders have health that goes down when they attack one another, <br> or
+              goes up when they consume food.</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!----------Contact Information----------->
+      <div class="contact" id="contact">
+        <div class="container text-center">
+          <h1>Contact Information</h1>
+          <p class="text-center">Thanks for visiting! <br> Feel free to reach out to me</p>
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <i class="fa fa-phone"></i>
+              <p>+1 647-242-5928</p>
+            </div>
+
+            <div class="col-md-6">
+              <i class="fa fa-envelope"></i>
+              <p>kashifsar01@gmail.com</p>
+            </div>
+
+          </div>
+          <button type="button" class="btn btn-primary" onclick="openResume()" target="_blank"><i
+              class="fa fa-download"></i>Resume</button>
+        </div>
+      </div>
+  </section>
+
+  <!-----Smooth Scroll----->
+  <script src="smooth-scroll.js"></script>
+  <script> var scroll = new SmoothScroll('a[href*="#"]'); </script>
+
+</body>
+
+</html>
